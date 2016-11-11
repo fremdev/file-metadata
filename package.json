@@ -4,7 +4,10 @@
   "description": "File Metadata Microservice",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js"
+  },
+  "engines": {
+    "node": "6.9.1"
   },
   "keywords": [
     "file metadata",
