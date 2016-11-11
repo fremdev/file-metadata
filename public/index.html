@@ -3,12 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>File Metadata Microservice</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body>
-    <form enctype="multipart/form-data" action="/upload/" method="post">
-    <input name="data" type="file" />
-    <button>Submit</button>
-</form>
+    <div class="container">
+      <h1>File Metadata Microservice</h1>
+      <blockquote class="blockquote">
+        User stories:
+        <ol>
+          <li>I can submit a FormData object that includes a file upload.</li>
+          <li>When I submit something, I will receive the file size in bytes within the JSON response.</li>
+        </ol>
+      </blockquote>
+
+      <h3>Input Form</h3>
+      <form class="form-inline" enctype="multipart/form-data" action="/upload/" method="post">
+        <div class="form-group">
+          <input type="file" name="data" class="form-control-file" id="inputFile" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">You can select a file and receive JSON response.</small>
+        </div>
+
+        <button class="btn btn-outline-primary">Submit</button>
+      </form>
+
+      <h3>Example output</h3>
+      <pre><code>      {
+        filename: "message.txt",
+        size: 58
+      }</code></pre>
+
+      <h3>Source code:</h3>
+      <p><a href="https://github.com/fremdev/file-metadata" target="_blank">File Metadata Microservice on GitHub</a></p>
+      <h6 class="text-xs-center">Built by <a href="https://github.com/fremdev" target="_blank">fremdev</a> • 2016</h6>
+    </div>
     <script src="js/scripts.js" charset="utf-8"></script>
   </body>
 </html>
